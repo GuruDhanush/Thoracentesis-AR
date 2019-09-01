@@ -1,0 +1,29 @@
+{
+  "name": "arjs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack-dev-server --open --mode development --host 192.168.1.35",
+    "prod": "webpack",
+    "tsc": "tsc"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aframe": "^0.9.2",
+    "ar.js": "^1.7.8",
+    "file-loader": "^4.2.0",
+    "three": "^0.108.0",
+    "threear": "^1.0.0-alpha.5"
+  },
+  "devDependencies": {
+    "css-loader": "^3.2.0",
+    "style-loader": "^1.0.0",
+    "ts-loader": "^6.0.4",
+    "typescript": "^3.6.2",
+    "webpack": "^4.39.3",
+    "webpack-cli": "^3.3.7",
+    "webpack-dev-server": "^3.8.0"
+  }
+}

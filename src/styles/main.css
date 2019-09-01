@@ -1,0 +1,21 @@
+
+body {
+    margin: 0px;
+    overflow: hidden;
+}
+
+
+.life-stats {
+    display: inline-block;
+    right: 10px;
+}
+
+
+.blood-pressure {
+    padding: 10px;
+
+}
+
+.heart-rate {
+    padding: 10px;
+}
