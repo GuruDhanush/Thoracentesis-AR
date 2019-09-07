@@ -54,9 +54,9 @@ var bp = document.getElementById('bp');
 
     modeSwitch.addEventListener('change', function () {
         if (this.checked)
-            model.setAttribute('gltf-model', '../models/lungdraco.gltf');
+            model.setAttribute('gltf-model', './models/lungdraco.gltf');
         else
-            model.setAttribute('gltf-model', '../models/bonedraco.gltf');
+            model.setAttribute('gltf-model', './models/bonedraco.gltf');
     });
 
     var looker = document.getElementById('marker');
