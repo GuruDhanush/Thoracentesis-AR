@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "webpack-dev-server --open --mode development --host 192.168.1.35",
     "prod": "webpack",
-    "tsc": "tsc"
+    "tsc": "tsc -w",
+    "deploy": "gh-pages -d dist"
   },
   "author": "",
   "license": "ISC",
@@ -19,6 +20,7 @@
   },
   "devDependencies": {
     "css-loader": "^3.2.0",
+    "gh-pages": "^2.1.1",
     "style-loader": "^1.0.0",
     "ts-loader": "^6.0.4",
     "typescript": "^3.6.2",
