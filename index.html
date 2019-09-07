@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=0.5">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AR-Thoracentesis</title>
+
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="/vendor/aframe.js"></script>
+    <script src="/vendor/aframe-ar.js"></script>
+</head>
+
+
+<body>
+    <div class="top-bar">
+        <div class="heading" id="marker">
+            Looking for marker
+        </div>
+        <div class="onoffswitch">
+            <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="mode-switch">
+            <label class="onoffswitch-label" for="mode-switch">
+                <span class="onoffswitch-inner"></span>
+                <span class="onoffswitch-switch"></span>
+            </label>
+        </div>
+
+        <div class="life-stats">
+
+            <div class="spo2">
+                <div id="spo2" class="number">99</div>
+                <div class="unit">%</div>
+            </div>
+
+
+            <div class="blood-pressure">
+                <div id="bp" class="number">120/80</div>
+                <div class="unit">mmHg</div>
+            </div>
+
+
+            <div class="heart-rate">
+                <div id="hr" class="number">80</div>
+                <div class="unit">bpm</div>
+            </div>
+
+        </div>
+    </div>
+
+    <a-scene embedded arjs='sourceType: webcam; detectionMode: mono; debugUIEnabled: false; canvasWidth: 640; canvasHeight: 480;'
+        gltf-model="dracoDecoderPath: /draco/;" vr-mode-ui="enabled: false">
+        <a-assets>
+            <a-asset-item id="lung-asset" src="/models/lungdraco.gltf"></a-asset-item>
+            <a-asset-item id="bone-asset" src="/models/bonedraco.gltf"></a-asset-item>
+        </a-assets>
+
+        <a-marker type="pattern" url="/models/printPattern.patt" registerevents>
+        
+            <a-entity id="model"  scale="5 5 5 5" rotation="90 0 0" gltf-model="#bone-asset"></a-entity>
+        </a-marker>
+        <a-entity camera rotation="0 0 -180"></a-entity>
+    </a-scene>
+
+</body>
+<script src="./main.js"></script>
+
+</html>
