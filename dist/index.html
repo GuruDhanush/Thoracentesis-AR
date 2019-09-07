@@ -3,13 +3,13 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, minimum-scale=0.5">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>AR-Thoracentesis</title>
 
-    <link rel="stylesheet" href="styles/main.css">
-    <script src="/vendor/aframe.js"></script>
-    <script src="/vendor/aframe-ar.js"></script>
+    <link rel="stylesheet" href="./styles/main.css">
+    <script src="./vendor/aframe.js"></script>
+    <script src="./vendor/aframe-ar.js"></script>
 </head>
 
 
@@ -49,13 +49,13 @@
     </div>
 
     <a-scene embedded arjs='sourceType: webcam; detectionMode: mono; debugUIEnabled: false; canvasWidth: 640; canvasHeight: 480;'
-        gltf-model="dracoDecoderPath: /draco/;" vr-mode-ui="enabled: false">
+        gltf-model="dracoDecoderPath: ./draco/;" vr-mode-ui="enabled: false">
         <a-assets>
-            <a-asset-item id="lung-asset" src="/models/lungdraco.gltf"></a-asset-item>
-            <a-asset-item id="bone-asset" src="/models/bonedraco.gltf"></a-asset-item>
+            <a-asset-item id="lung-asset" src="./models/lungdraco.gltf"></a-asset-item>
+            <a-asset-item id="bone-asset" src="./models/bonedraco.gltf"></a-asset-item>
         </a-assets>
 
-        <a-marker type="pattern" url="/models/printPattern.patt" registerevents>
+        <a-marker type="pattern" url="./models/printPattern.patt" registerevents>
         
             <a-entity id="model"  scale="5 5 5 5" rotation="90 0 0" gltf-model="#bone-asset"></a-entity>
         </a-marker>
